@@ -1,0 +1,7 @@
+{
+    "name": "Polyphase Engine Official Addons",
+    "addons": [
+        "https://github.com/Polyphase-Labs/Hello-World-Polyphase-Addon",
+        "https://github.com/Polyphase-Labs/com.polyphase.formats.video"
+    ]
+}
