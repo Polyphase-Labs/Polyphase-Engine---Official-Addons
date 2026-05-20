@@ -5,6 +5,7 @@
         "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.midi",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam",
-        "https://github.com/Polyphase-Labs/com.polyphase.formats.video"
+        "https://github.com/Polyphase-Labs/com.polyphase.formats.video",
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp"
     ]
 }
