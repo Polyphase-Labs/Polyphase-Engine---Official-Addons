@@ -6,6 +6,7 @@
         "https://github.com/Polyphase-Labs/com.polyphase.formats.midi",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.video",
-        "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp"
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp",
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2"
     ]
 }
