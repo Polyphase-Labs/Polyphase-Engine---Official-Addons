@@ -3,10 +3,18 @@
     "addons": [
         "https://github.com/Polyphase-Labs/Hello-World-Polyphase-Addon",
         "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core",
+        "https://github.com/Polyphase-Labs/com.polyphase.system.items.core",
+        "https://github.com/Polyphase-Labs/com.polyphase.engine.fps",
+        "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.loot",
+        "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core",
+        "https://github.com/Polyphase-Labs/com.polyphase.engine.combat.core",
+        "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.midi",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam",
         "https://github.com/Polyphase-Labs/com.polyphase.formats.video",
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp",
-        "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2"
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2",
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv",
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64"
     ]
 }
