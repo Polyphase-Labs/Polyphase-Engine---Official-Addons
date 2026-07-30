@@ -59,7 +59,7 @@ It is generated, do not edit it by hand:
 | `package.json`                         | The list of addon repositories (source of truth for what is in the registry).                                                       |
 | `registry.config.json`                 | Registry metadata, categories, and hand-authored per-addon overrides (summary, tags, category, display name).                       |
 | `tools/build-manifest.mjs`             | Pulls each repo's `package.json` + GitHub metadata and writes `manifest.json`.                                                  |
-| `.github/workflows/build-manifest.yml` | Rebuilds and commits `manifest.json` on push, nightly, on `workflow_dispatch`, and on an `addon-updated` repository dispatch. |
+| `.github/workflows/build-manifest.yml` | Rebuilds and commits `manifest.json` on every commit, nightly, on `workflow_dispatch`, and on an `addon-updated` repository dispatch. |
 
 Rebuild locally (Node 18+; `GH_TOKEN` optional, raises the API rate limit):
 
@@ -67,6 +67,8 @@ Rebuild locally (Node 18+; `GH_TOKEN` optional, raises the API rate limit):
 node tools/build-manifest.mjs           # write manifest.json
 node tools/build-manifest.mjs --check   # fail if manifest.json is out of date
 ```
+
+Want your own registry (studio, team or personal addons)? See [CreateYourOwnAddonsRepo.md](CreateYourOwnAddonsRepo.md) for setup, configuration and the GitHub Actions permissions the workflow needs.
 
 An addon repo can refresh the registry as soon as it publishes:
 

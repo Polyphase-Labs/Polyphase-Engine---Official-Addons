@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds manifest.json — the machine-readable registry index — from:
+// Builds manifest.json, the machine-readable registry index, from:
 //   package.json          the list of addon repositories
 //   registry.config.json  registry metadata, categories and hand-authored overrides
 //   GitHub                each addon repo's package.json, repo metadata, latest release, file listing
@@ -33,7 +33,7 @@ async function gh(path, { raw = false } = {}) {
         const res = await fetch(`${API}${path}`, { headers })
         if (res.status === 404) return null
         if (res.ok) return raw ? res.text() : res.json()
-        // Secondary rate limit / transient failure — back off and retry twice.
+        // Secondary rate limit / transient failure: back off and retry twice.
         if (attempt < 2 && (res.status === 403 || res.status === 429 || res.status >= 500)) {
             await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)))
             continue
@@ -64,7 +64,7 @@ const firstSentence = (text) => {
     return (m ? m[0] : text).trim()
 }
 
-// package.json dependencies are either {"id": "^1.0.0"} or ["id", ...] — normalize to the object form.
+// package.json dependencies are either {"id": "^1.0.0"} or ["id", ...]; normalize to the object form.
 const normalizeDeps = (deps) => {
     if (!deps) return {}
     if (Array.isArray(deps)) return Object.fromEntries(deps.map((d) => [d, '*']))
@@ -197,7 +197,7 @@ if (CHECK) {
         console.log(`manifest.json is up to date (${packages.length} packages)`)
         process.exit(0)
     }
-    console.error('manifest.json is out of date — run: node tools/build-manifest.mjs')
+    console.error('manifest.json is out of date, run: node tools/build-manifest.mjs')
     process.exit(1)
 }
 
