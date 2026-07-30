@@ -1,0 +1,77 @@
+name: Build manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - package.json
+      - registry.config.json
+      - tools/build-manifest.mjs
+      - .github/workflows/build-manifest.yml
+  pull_request:
+    paths:
+      - package.json
+      - registry.config.json
+      - manifest.json
+      - tools/build-manifest.mjs
+  schedule:
+    # Nightly refresh so version / release / description changes in addon repos land here.
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  # Addon repos can push an update immediately:
+  #   gh api repos/Polyphase-Labs/Polyphase-Engine---Official-Addons/dispatches \
+  #     -f event_type=addon-updated
+  repository_dispatch:
+    types: [addon-updated]
+
+concurrency:
+  group: build-manifest
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild manifest.json
+        env:
+          # REGISTRY_TOKEN is only needed if any addon repo is private.
+          GH_TOKEN: ${{ secrets.REGISTRY_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node tools/build-manifest.mjs
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- manifest.json; then
+            echo "manifest.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json
+          git commit -m "Chore: Rebuild manifest.json from addon repositories"
+          git push
+
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify manifest.json is current
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/build-manifest.mjs --check

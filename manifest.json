@@ -1,0 +1,950 @@
+{
+    "manifestVersion": 1,
+    "id": "polyphase-official",
+    "name": "Polyphase Engine Official Addons",
+    "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
+    "vendor": "Polyphase Labs",
+    "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons",
+    "updated": "2026-07-30",
+    "packageCount": 18,
+    "categories": [
+        {
+            "id": "examples",
+            "name": "Examples",
+            "description": "Sample projects and reference addons."
+        },
+        {
+            "id": "systems",
+            "name": "Systems",
+            "description": "Runtime gameplay systems and frameworks."
+        },
+        {
+            "id": "editor",
+            "name": "Editor",
+            "description": "Editor-side tooling, windows and authoring workflows."
+        },
+        {
+            "id": "formats",
+            "name": "Formats",
+            "description": "Media and file format support (audio, video, capture)."
+        },
+        {
+            "id": "build-targets",
+            "name": "Build Targets",
+            "description": "Additional platform build targets for the Polyphase editor."
+        }
+    ],
+    "packages": [
+        {
+            "id": "HelloWorld",
+            "name": "Hello World",
+            "summary": "A minimal addon example with a single Text Widget.",
+            "description": "Minimal Polyphase project demonstrating the smallest possible addon: a single Text Widget rendered on screen. Intended as a starting point for new addon authors.",
+            "category": "examples",
+            "type": "project",
+            "tags": [
+                "example",
+                "sample",
+                "starter",
+                "widget",
+                "ui"
+            ],
+            "version": "1.0.0",
+            "author": "VLT Media",
+            "license": null,
+            "engine": {
+                "target": null,
+                "apiVersion": null,
+                "entrySymbol": null,
+                "binaryName": null,
+                "resolveMode": null
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/Hello-World-Polyphase-Addon",
+                "clone": "https://github.com/Polyphase-Labs/Hello-World-Polyphase-Addon.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/Hello-World-Polyphase-Addon/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/Hello-World-Polyphase-Addon/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/Hello-World-Polyphase-Addon/releases",
+                "issues": "https://github.com/Polyphase-Labs/Hello-World-Polyphase-Addon/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-04-28T04:14:01Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.system.character.dialogue.core",
+            "name": "Polyphase Dialogue Core",
+            "summary": "Core character dialogue system for driving in-engine conversations.",
+            "description": "Cross-platform runtime dialogue system: choices, variables, events, Lua, save/load, editor preview.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "dialogue",
+                "conversation",
+                "narrative",
+                "character",
+                "lua",
+                "core"
+            ],
+            "version": "0.1.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.system.character.dialogue.core",
+                "resolveMode": null
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core/tree/main/Documentation",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core/issues"
+            },
+            "latestRelease": {
+                "tag": "v1.0.0",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.system.character.dialogue.core/releases/tag/v1.0.0"
+            },
+            "prebuiltBinaries": [
+                {
+                    "config": "Release",
+                    "arch": "x64",
+                    "platform": "Windows",
+                    "value": "com.polyphase.system.character.dialogue.core-Windows-x64-Release.dll",
+                    "type": "releaseAsset"
+                }
+            ],
+            "updatedAt": "2026-05-13T01:12:11Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.system.items.core",
+            "name": "Polyphase Items Core",
+            "summary": "Core item system for defining, storing, and managing in-game items.",
+            "description": "ItemInfo asset + Items Lua global. Authors define icon, mesh, description, tags, category, signals, and per-category effect parameters (heal/ammo/shield/weapon) via the editor inspector. Lua dispatches effects through Items.Apply or routes them to the player inventory based on the asset's autoUse flag.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "items",
+                "inventory",
+                "assets",
+                "lua",
+                "rpg",
+                "core"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.system.items.core",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.system.items.core",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.system.items.core.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.items.core/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.items.core/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.system.items.core/tree/main/Documentation",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.system.items.core/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.system.items.core/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T06:51:37Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.engine.fps",
+            "name": "Polyphase FPS",
+            "summary": "Core first-person controller and gameplay framework for FPS-style projects.",
+            "description": "FPS framework for Polyphase: input bindings (Shoot1/2/3, Reload, weapon swap, pause, Z-lock), navmesh-driven enemy AI with combat tunables, mission/objective system with story brief hooks, and main / pause / settings menus. Builds on com.polyphase.engine.combat.core.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "fps",
+                "first-person",
+                "gameplay",
+                "controller",
+                "ai",
+                "weapons",
+                "menus"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.engine.fps",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {
+                "com.polyphase.engine.combat.core": "^1.0.0",
+                "com.polyphase.system.rpg.mission.core": "^1.0.0"
+            },
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.engine.fps",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.engine.fps.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.engine.fps/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.engine.fps/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.engine.fps/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.engine.fps/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T06:43:25Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.system.rpg.loot",
+            "name": "Polyphase RPG Loot",
+            "summary": "RPG loot system.",
+            "description": "LootTable asset + Loot Lua global. Designers author weighted drop tables (guaranteed + weighted entries with min/max counts and optional condition tags) in the editor. Lua composes overlays on top of authored data, runs the roll, and either spawns world pickups (enemy drops / chests) or applies rewards directly (mission completion). Pairs with com.polyphase.system.items.core for the item registry.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "loot",
+                "rpg",
+                "drop-table",
+                "rewards",
+                "lua",
+                "items"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.system.rpg.loot",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.loot",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.loot.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.rpg.loot/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.rpg.loot/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.loot/tree/main/Documentation",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.loot/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.loot/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T07:01:24Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.system.rpg.mission.core",
+            "name": "Polyphase Mission Core",
+            "summary": "Core RPG mission system.",
+            "description": "Mission framework — runtime Mission registry + MissionAsset editor-authored archetypes (objectives, briefing, scene to load, weapon loadout) with a Lua-side flow orchestrator. Genre-neutral; FPS / RPG / point-and-click addons depend on this.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "mission",
+                "objectives",
+                "quests",
+                "rpg",
+                "lua",
+                "core"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.system.rpg.mission.core",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.system.rpg.mission.core/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T06:34:16Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.engine.combat.core",
+            "name": "Polyphase Combat Core",
+            "summary": "Core combat framework.",
+            "description": "Core combat framework for Polyphase. Damage, hit resolution and combat state shared by the FPS and RPG systems.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "combat",
+                "damage",
+                "core",
+                "gameplay"
+            ],
+            "version": null,
+            "author": "Polyphase Labs",
+            "license": null,
+            "engine": {
+                "target": null,
+                "apiVersion": null,
+                "entrySymbol": null,
+                "binaryName": null,
+                "resolveMode": null
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.engine.combat.core",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.engine.combat.core.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": null,
+                "readme": null,
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.engine.combat.core/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.engine.combat.core/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T06:29:39Z",
+            "status": "unpublished"
+        },
+        {
+            "id": "com.polyphase.system.worldstream",
+            "name": "Polyphase World Stream",
+            "summary": "World streaming system for dynamically loading and unloading scenes.",
+            "description": "World and sector streaming addon for Polyphase Engine. Streams large worlds as small sectors across Windows, Linux, GameCube, Wii, and Nintendo 3DS with conservative console-safe defaults.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "worldstream",
+                "streaming",
+                "sector",
+                "open-world",
+                "scenes",
+                "polyphase",
+                "gamecube",
+                "wii",
+                "3ds"
+            ],
+            "version": "0.1.0",
+            "author": "Polyphase Labs",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.system.worldstream",
+                "resolveMode": "source"
+            },
+            "platforms": [
+                "Windows",
+                "Linux",
+                "GameCube",
+                "Wii",
+                "3DS"
+            ],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.system.worldstream",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.system.worldstream.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.worldstream/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.system.worldstream/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.system.worldstream/tree/main/Documentation",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.system.worldstream/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.system.worldstream/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-07-30T22:54:38Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.editor.levelbuilder.core",
+            "name": "Polyphase Level Builder Core",
+            "summary": "Core level builder framework for creating and managing levels.",
+            "description": "Shared editor framework for level building tools (tools, brushes, snap providers, palettes, preview, dockable Level Builder window).",
+            "category": "editor",
+            "type": "plugin",
+            "tags": [
+                "editor",
+                "level-builder",
+                "tools",
+                "brushes",
+                "level-design",
+                "core"
+            ],
+            "version": "0.1.0",
+            "author": "Polyphase Labs",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.editor.levelbuilder.core",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/main/package.json",
+                "readme": null,
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-23T06:08:25Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.editor.levelbuilder.tool.core",
+            "name": "Polyphase Level Builder Tools",
+            "summary": "Core level builder tool for creating custom tools and brushes for com.polyphase.editor.levelbuilder.core.",
+            "description": "Generic brushes (Line, Box, BoxFill, NoiseFill, Replace, Paint, MaskFill) for sibling level-builder tools. Each brush routes placements through the active sibling's spawn function so it stays kit-agnostic.",
+            "category": "editor",
+            "type": "plugin",
+            "tags": [
+                "editor",
+                "level-builder",
+                "brushes",
+                "tools",
+                "level-design"
+            ],
+            "version": "0.1.0",
+            "author": "Polyphase Labs",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.editor.levelbuilder.tool.core",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {
+                "com.polyphase.editor.levelbuilder.core": "*"
+            },
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/main/package.json",
+                "readme": null,
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-23T06:08:37Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.formats.midi",
+            "name": "Polyphase MIDI",
+            "summary": "MIDI format addon for playing back MIDI and SoundFonts.",
+            "description": "MIDI playback, SoundFont synthesis, piano-roll viewer, and runtime music generation for Polyphase",
+            "category": "formats",
+            "type": "plugin",
+            "tags": [
+                "midi",
+                "soundfont",
+                "audio",
+                "music",
+                "synthesis",
+                "piano-roll"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.formats.midi",
+                "resolveMode": null
+            },
+            "platforms": [
+                "Windows",
+                "Linux",
+                "3DS",
+                "Wii",
+                "GameCube"
+            ],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.formats.midi",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.formats.midi.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.formats.midi/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.formats.midi/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.formats.midi/tree/main/Documentaion",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.formats.midi/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.formats.midi/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-05-09T08:15:06Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.formats.webcam",
+            "name": "Polyphase Webcam",
+            "summary": "Webcam capture addon for streaming camera feeds onto Quads or as Textures.",
+            "description": "Webcam capture addon for Polyphase. Streams live camera feeds onto Quads or as Textures, using Media Foundation on Windows and V4L2 on Linux.",
+            "category": "formats",
+            "type": "plugin",
+            "tags": [
+                "webcam",
+                "camera",
+                "capture",
+                "video",
+                "texture",
+                "media-foundation",
+                "v4l2"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.formats.webcam",
+                "resolveMode": null
+            },
+            "platforms": [
+                "Windows",
+                "Linux",
+                "GameCube",
+                "Wii",
+                "3DS"
+            ],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.formats.webcam/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.formats.webcam/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam/tree/main/Documentation",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.formats.webcam/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-05-09T06:37:11Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.formats.video",
+            "name": "Polyphase Video Player",
+            "summary": "Video Player addon that allows you to play video files on Quads or as Textures.",
+            "description": "Video Player for Polyphase. Decodes video files via FFmpeg on Windows and Linux and presents them on Quads or as Textures.",
+            "category": "formats",
+            "type": "plugin",
+            "tags": [
+                "video",
+                "playback",
+                "ffmpeg",
+                "movie",
+                "texture",
+                "media"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.formats.video",
+                "resolveMode": null
+            },
+            "platforms": [
+                "Windows",
+                "Linux",
+                "GameCube",
+                "Wii",
+                "3DS"
+            ],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.formats.video",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.formats.video.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.formats.video/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.formats.video/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.formats.video/tree/main/Docs",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.formats.video/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.formats.video/issues"
+            },
+            "latestRelease": {
+                "tag": "v1.0.1",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.formats.video/releases/tag/v1.0.1"
+            },
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-05-15T00:59:29Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.psp",
+            "name": "PlayStation Portable (PSP)",
+            "summary": "PlayStation Portable (PSP) build target.",
+            "description": "Adds a 'Sony PSP (PSPSDK)' build target to the Polyphase editor. Compiles via PSPSDK (mips-allegrex-gcc), wraps the ELF + PARAM.SFO + ICON0/PIC1 into an EBOOT.PBP via pack-pbp, launches in PPSSPP or deploys to real hardware via pspsh. On Linux/macOS the toolchain runs natively against $PSPDEV; on Windows it runs inside WSL2 (pspdev publishes no native Windows binaries) — install WSL2 + Ubuntu, then install pspdev inside WSL.",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "psp",
+                "handheld",
+                "homebrew",
+                "pspsdk",
+                "ppsspp"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.psp",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "homebrew.psp",
+                    "displayName": "Sony PSP (PSPSDK)",
+                    "category": "Handheld"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.psp/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.psp/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp/issues"
+            },
+            "latestRelease": {
+                "tag": "v1.0.0",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp/releases/tag/v1.0.0"
+            },
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-07-15T13:24:14Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.ps2",
+            "name": "PlayStation 2 (PS2)",
+            "summary": "PlayStation 2 (PS2) build target.",
+            "description": "Adds a 'Sony PS2 (PS2SDK + gsKit)' build target to the Polyphase editor. Compiles via PS2SDK (mips64r5900el-ps2-elf-gcc), produces a bare ELF and optionally an mkisofs .iso for PCSX2 / FreeMcBoot. On Windows ps2dev ships a native build (https://github.com/ps2dev/ps2dev/releases); on Linux/macOS the toolchain runs natively against $PS2DEV. WSL routing is available as an opt-in fallback via the Target Options panel.",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "ps2",
+                "playstation-2",
+                "retro",
+                "homebrew",
+                "ps2sdk",
+                "gskit",
+                "pcsx2"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.ps2",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "homebrew.ps2",
+                    "displayName": "Sony PS2 (PS2SDK + gsKit)",
+                    "category": "Retro Consoles"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.ps2/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.ps2/main/README.md",
+                "documentation": "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2/tree/main/Documentation",
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-07-17T18:50:20Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.dreamcast",
+            "name": "Dreamcast",
+            "summary": "Dreamcast build target.",
+            "description": "Adds a 'Dreamcast (KallistiOS)' build target to the Polyphase editor. Routes the compile/package/run pipeline through a user-selectable toolchain: DreamSDK (Windows, via dreamsdk-runner.exe), a native KallistiOS install ($KOS_BASE + environ.sh), or KallistiOS inside WSL. Compiles the engine + Runtime/Dreamcast into a KOS .elf, wraps it into a .cdi/.gdi with mkdcdisc, and launches in flycast/lxdream/redream or deploys to hardware via dc-tool-ip. Ships a Variant-2 engine runtime (Runtime/Dreamcast) plus Makefile_Dreamcast.",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "dreamcast",
+                "sega",
+                "retro",
+                "homebrew",
+                "kallistios",
+                "flycast"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.dreamcast",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "homebrew.dreamcast",
+                    "displayName": "Dreamcast (KallistiOS)",
+                    "category": "Retro Consoles"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.dreamcast",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.dreamcast.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.dreamcast/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.dreamcast/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.dreamcast/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.dreamcast/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-07-22T03:39:55Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.androidtv",
+            "name": "Android TV",
+            "summary": "Android TV build target.",
+            "description": "Adds a 'Android TV' build target to the Polyphase editor. Stages the engine's Standalone/Android project into Intermediate/BuildTargets/AndroidTV/, applies an Android TV manifest overlay (LEANBACK_LAUNCHER category, touchscreen marked not required, leanback feature, TV banner), patches build.gradle (applicationId, namespace, versionCode, versionName, min/target/compileSdk), invokes `gradlew assembleRelease` natively, and copies the resulting APK to <project>/Build/AndroidTV/. Optionally installs and launches on an attached Android TV device or emulator via adb.",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "android-tv",
+                "android",
+                "leanback",
+                "apk",
+                "gradle",
+                "tv"
+            ],
+            "version": "0.1.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.androidtv",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "polyphase.androidtv",
+                    "displayName": "Android TV",
+                    "category": "Android"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.androidtv/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.androidtv/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T06:12:12Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.linux-arm64",
+            "name": "Linux ARM64",
+            "summary": "Linux ARM64 build target.",
+            "description": "Adds a 'Linux ARM64 (aarch64)' build target to the Polyphase editor. Cross-compiles the existing Linux + Vulkan game runtime (PLATFORM_LINUX=1, API_VULKAN=1) via aarch64-linux-gnu-* against a user-provided ARM64 sysroot, and emits an ARM64 ELF runnable on Debian/Ubuntu-class aarch64 devices (Orange Pi 5, Pine64, Raspberry Pi 4/5 with Mesa Vulkan, etc.). On Linux/macOS the toolchain runs natively; on Windows it runs inside WSL2 (aarch64-linux-gnu-gcc ships in apt as crossbuild-essential-arm64). Build outputs go to Build/Linux/arm64/ and Intermediate/Linux/arm64/ so they never collide with x64 Linux builds (relies on the engine's BUILD_SUFFIX makefile variable).",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "linux",
+                "arm64",
+                "aarch64",
+                "cross-compile",
+                "vulkan",
+                "raspberry-pi",
+                "sbc"
+            ],
+            "version": "0.1.0",
+            "author": "Polyphase Engine team",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.linux-arm64",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "polyphase.linux.arm64",
+                    "displayName": "Linux ARM64 (aarch64)",
+                    "category": "Linux"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-06-15T06:16:51Z",
+            "status": "published"
+        }
+    ]
+}

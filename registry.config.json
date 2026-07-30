@@ -1,0 +1,270 @@
+{
+    "$comment": "Hand-edited input for tools/build-manifest.mjs. Everything here is merged on top of the data pulled from each addon repo's package.json / GitHub metadata. Edit this file, never manifest.json.",
+    "registry": {
+        "manifestVersion": 1,
+        "id": "polyphase-official",
+        "name": "Polyphase Engine Official Addons",
+        "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
+        "vendor": "Polyphase Labs",
+        "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons"
+    },
+    "categories": [
+        {
+            "id": "examples",
+            "name": "Examples",
+            "description": "Sample projects and reference addons."
+        },
+        {
+            "id": "systems",
+            "name": "Systems",
+            "description": "Runtime gameplay systems and frameworks."
+        },
+        {
+            "id": "editor",
+            "name": "Editor",
+            "description": "Editor-side tooling, windows and authoring workflows."
+        },
+        {
+            "id": "formats",
+            "name": "Formats",
+            "description": "Media and file format support (audio, video, capture)."
+        },
+        {
+            "id": "build-targets",
+            "name": "Build Targets",
+            "description": "Additional platform build targets for the Polyphase editor."
+        }
+    ],
+    "overrides": {
+        "HelloWorld": {
+            "name": "Hello World",
+            "summary": "A minimal addon example with a single Text Widget.",
+            "description": "Minimal Polyphase project demonstrating the smallest possible addon: a single Text Widget rendered on screen. Intended as a starting point for new addon authors.",
+            "category": "examples",
+            "type": "project",
+            "tags": [
+                "example",
+                "sample",
+                "starter",
+                "widget",
+                "ui"
+            ]
+        },
+        "com.polyphase.engine.fps": {
+            "name": "Polyphase FPS",
+            "summary": "Core first-person controller and gameplay framework for FPS-style projects.",
+            "tags": [
+                "fps",
+                "first-person",
+                "gameplay",
+                "controller",
+                "ai",
+                "weapons",
+                "menus"
+            ]
+        },
+        "com.polyphase.engine.combat.core": {
+            "name": "Polyphase Combat Core",
+            "summary": "Core combat framework.",
+            "description": "Core combat framework for Polyphase. Damage, hit resolution and combat state shared by the FPS and RPG systems.",
+            "author": "Polyphase Labs",
+            "tags": [
+                "combat",
+                "damage",
+                "core",
+                "gameplay"
+            ]
+        },
+        "com.polyphase.system.character.dialogue.core": {
+            "name": "Polyphase Dialogue Core",
+            "summary": "Core character dialogue system for driving in-engine conversations.",
+            "tags": [
+                "dialogue",
+                "conversation",
+                "narrative",
+                "character",
+                "lua",
+                "core"
+            ]
+        },
+        "com.polyphase.system.items.core": {
+            "name": "Polyphase Items Core",
+            "summary": "Core item system for defining, storing, and managing in-game items.",
+            "tags": [
+                "items",
+                "inventory",
+                "assets",
+                "lua",
+                "rpg",
+                "core"
+            ]
+        },
+        "com.polyphase.system.rpg.loot": {
+            "name": "Polyphase RPG Loot",
+            "summary": "RPG loot system.",
+            "tags": [
+                "loot",
+                "rpg",
+                "drop-table",
+                "rewards",
+                "lua",
+                "items"
+            ]
+        },
+        "com.polyphase.system.rpg.mission.core": {
+            "name": "Polyphase Mission Core",
+            "summary": "Core RPG mission system.",
+            "tags": [
+                "mission",
+                "objectives",
+                "quests",
+                "rpg",
+                "lua",
+                "core"
+            ]
+        },
+        "com.polyphase.system.worldstream": {
+            "summary": "World streaming system for dynamically loading and unloading scenes.",
+            "platforms": [
+                "Windows",
+                "Linux",
+                "GameCube",
+                "Wii",
+                "3DS"
+            ],
+            "tags": [
+                "worldstream",
+                "streaming",
+                "sector",
+                "open-world",
+                "scenes"
+            ]
+        },
+        "com.polyphase.editor.levelbuilder.core": {
+            "summary": "Core level builder framework for creating and managing levels.",
+            "tags": [
+                "editor",
+                "level-builder",
+                "tools",
+                "brushes",
+                "level-design",
+                "core"
+            ]
+        },
+        "com.polyphase.editor.levelbuilder.tool.core": {
+            "summary": "Core level builder tool for creating custom tools and brushes for com.polyphase.editor.levelbuilder.core.",
+            "tags": [
+                "editor",
+                "level-builder",
+                "brushes",
+                "tools",
+                "level-design"
+            ]
+        },
+        "com.polyphase.formats.midi": {
+            "name": "Polyphase MIDI",
+            "summary": "MIDI format addon for playing back MIDI and SoundFonts.",
+            "tags": [
+                "midi",
+                "soundfont",
+                "audio",
+                "music",
+                "synthesis",
+                "piano-roll"
+            ]
+        },
+        "com.polyphase.formats.webcam": {
+            "name": "Polyphase Webcam",
+            "summary": "Webcam capture addon for streaming camera feeds onto Quads or as Textures.",
+            "description": "Webcam capture addon for Polyphase. Streams live camera feeds onto Quads or as Textures, using Media Foundation on Windows and V4L2 on Linux.",
+            "tags": [
+                "webcam",
+                "camera",
+                "capture",
+                "video",
+                "texture",
+                "media-foundation",
+                "v4l2"
+            ]
+        },
+        "com.polyphase.formats.video": {
+            "name": "Polyphase Video Player",
+            "summary": "Video Player addon that allows you to play video files on Quads or as Textures.",
+            "description": "Video Player for Polyphase. Decodes video files via FFmpeg on Windows and Linux and presents them on Quads or as Textures.",
+            "tags": [
+                "video",
+                "playback",
+                "ffmpeg",
+                "movie",
+                "texture",
+                "media"
+            ]
+        },
+        "com.polyphase.build.target.psp": {
+            "name": "PlayStation Portable (PSP)",
+            "summary": "PlayStation Portable (PSP) build target.",
+            "tags": [
+                "build-target",
+                "psp",
+                "handheld",
+                "homebrew",
+                "pspsdk",
+                "ppsspp"
+            ]
+        },
+        "com.polyphase.build.target.ps2": {
+            "name": "PlayStation 2 (PS2)",
+            "summary": "PlayStation 2 (PS2) build target.",
+            "tags": [
+                "build-target",
+                "ps2",
+                "playstation-2",
+                "retro",
+                "homebrew",
+                "ps2sdk",
+                "gskit",
+                "pcsx2"
+            ]
+        },
+        "com.polyphase.build.target.dreamcast": {
+            "name": "Dreamcast",
+            "summary": "Dreamcast build target.",
+            "tags": [
+                "build-target",
+                "dreamcast",
+                "sega",
+                "retro",
+                "homebrew",
+                "kallistios",
+                "flycast"
+            ]
+        },
+        "com.polyphase.build.target.androidtv": {
+            "name": "Android TV",
+            "summary": "Android TV build target.",
+            "tags": [
+                "build-target",
+                "android-tv",
+                "android",
+                "leanback",
+                "apk",
+                "gradle",
+                "tv"
+            ]
+        },
+        "com.polyphase.build.target.linux-arm64": {
+            "name": "Linux ARM64",
+            "summary": "Linux ARM64 build target.",
+            "tags": [
+                "build-target",
+                "linux",
+                "arm64",
+                "aarch64",
+                "cross-compile",
+                "vulkan",
+                "raspberry-pi",
+                "sbc"
+            ]
+        }
+    }
+}
