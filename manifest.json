@@ -5,8 +5,8 @@
     "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
     "vendor": "Polyphase Labs",
     "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons",
-    "updated": "2026-07-30",
-    "packageCount": 18,
+    "updated": "2026-08-01",
+    "packageCount": 21,
     "categories": [
         {
             "id": "examples",
@@ -944,6 +944,152 @@
             "latestRelease": null,
             "prebuiltBinaries": [],
             "updatedAt": "2026-06-15T06:16:51Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.webgpu",
+            "name": "WebGPU",
+            "summary": "WebGPU build target.",
+            "description": "Adds a 'Web (WebGPU)' build target to the Polyphase editor. Compiles the engine + Runtime/Web into a single-threaded WebAssembly module with Emscripten, renders through a WebGPU backend (Dawn's emdawnwebgpu port, WGSL ubershaders), packages cooked content into a MEMFS preload bundle with file_packager.py, and serves the result locally for Build & Run. Requires a WebGPU-capable browser (Chrome/Edge 113+, Safari 18+, Firefox 141+). Output runs from any static host - no SharedArrayBuffer / COOP-COEP headers required.",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "webgpu",
+                "gpu",
+                "web"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.webgpu",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "web.webgpu",
+                    "displayName": "Web (WebGPU)",
+                    "category": "Web"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.webgpu/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.webgpu/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-08-01T08:58:18Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.build.target.webgl2",
+            "name": "WebGL2",
+            "summary": "WebGL2 build target.",
+            "description": "Adds a 'Web (WebGL2)' build target to the Polyphase editor. Compiles the engine + Runtime/Web into a single-threaded WebAssembly module with Emscripten (native emsdk on Windows/Linux, WSL emsdk fallback), renders through a WebGL2 / ESSL 300 backend, packages cooked content (Content.pak or loose tree) into a MEMFS preload bundle with file_packager.py, and serves the result locally for Build & Run. Ships a Variant-2 engine runtime (Runtime/Web) plus Makefile_Web. Output runs from any static host - no SharedArrayBuffer / COOP-COEP headers required.",
+            "category": "build-targets",
+            "type": "plugin",
+            "tags": [
+                "build-target",
+                "webgl2",
+                "gpu",
+                "web"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 4,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.build.target.webgl2",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [
+                {
+                    "id": "web.webgl2",
+                    "displayName": "Web (WebGL2)",
+                    "category": "Web"
+                }
+            ],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.webgl2/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.build.target.webgl2/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-08-01T08:49:47Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.thirdparty.houdini.hda",
+            "name": "Houdini Engine Sync & HDA",
+            "summary": "Houdini Engine & Houdini Digital Asset (HDA) support for Polyphase. ",
+            "description": "Use Houdini HDAs in the Polyphase Engine to generate content for your games.",
+            "category": "examples",
+            "type": "plugin",
+            "tags": [
+                "houdini",
+                "hda",
+                "dcc",
+                "third-party",
+                "asset",
+                "pipeline"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "editor",
+                "apiVersion": 9,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.thirdparty.houdini.hda",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-08-01T20:45:14Z",
             "status": "published"
         }
     ]
