@@ -1,3 +1,4 @@
+
 {
     "$comment": "Hand-edited input for tools/build-manifest.mjs. Everything here is merged on top of the data pulled from each addon repo's package.json / GitHub metadata. Edit this file, never manifest.json.",
     "registry": {
@@ -265,6 +266,39 @@
                 "raspberry-pi",
                 "sbc"
             ]
+        },
+        "com.polyphase.build.target.webgpu": {
+            "name": "WebGPU",
+            "summary": "WebGPU build target.",
+            "tags": [
+                "build-target",
+                "webgpu",
+                "gpu",
+                "web"
+            ]
+        },
+        "com.polyphase.build.target.webgl2": {
+            "name": "WebGL2",
+            "summary": "WebGL2 build target.",
+            "tags": [
+                "build-target",
+                "webgl2",
+                "gpu",
+                "web"
+            ]
+        },
+        "com.polyphase.thirdparty.houdini.hda": {
+            "name": "Houdini Engine Sync & HDA",
+            "summary": "Houdini Engine & Houdini Digital Asset (HDA) support for Polyphase. ",
+            "tags": [
+                "houdini",
+                "hda",
+                "dcc",
+                "third-party",
+                "asset",
+                "pipeline"
+            ]
+        }
         }
     }
-}
+

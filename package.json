@@ -18,6 +18,9 @@
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.ps2",
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.dreamcast",
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv",
-        "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64"
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64",
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu",
+        "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2",
+        "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda"
     ]
 }

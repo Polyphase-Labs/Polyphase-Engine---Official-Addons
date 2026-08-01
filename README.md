@@ -34,6 +34,13 @@ These are the official addons for the Polyphase Engine.
 | [com.polyphase.formats.webcam](https://github.com/Polyphase-Labs/com.polyphase.formats.webcam) | Webcam capture addon for streaming camera feeds onto `Quads` or as `Textures`.      |
 | [com.polyphase.formats.video](https://github.com/Polyphase-Labs/com.polyphase.formats.video)   | Video Player addon that allows you to play video files on `Quads` or as `Textures`. |
 
+## Third Party Addons
+
+| Name                                                                                        | Description                                                                             |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [com.polyphase.thirdparty.houdini.hda](https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda)     | Houdini Engine & Houdini Digital Asset (HDA) support for Polyphase.                                 |
+
+
 ## Build Targets
 
 | Name                                                                                                            | Description                |
@@ -43,6 +50,8 @@ These are the official addons for the Polyphase Engine.
 | [com.polyphase.build.target.dreamcast](https://github.com/Polyphase-Labs/com.polyphase.build.target.dreamcast)     | Dreamcast                  |
 | [com.polyphase.build.target.androidtv](https://github.com/Polyphase-Labs/com.polyphase.build.target.androidtv)     | Android TV                 |
 | [com.polyphase.build.target.linux-arm64](https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64) | Linux ARM64                |
+| [com.polyphase.build.target.webgpu](https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu) | WebGPU                     |
+| [com.polyphase.build.target.webgl2](https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2) | WebGL2                     |
 
 # Registry Manifest
 
