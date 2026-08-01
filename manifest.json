@@ -32,6 +32,11 @@
             "id": "build-targets",
             "name": "Build Targets",
             "description": "Additional platform build targets for the Polyphase editor."
+        },
+        {
+            "id": "third-party",
+            "name": "Third Party",
+            "description": "Third-party addons and integrations for the Polyphase editor."
         }
     ],
     "packages": [
