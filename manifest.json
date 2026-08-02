@@ -5,7 +5,7 @@
     "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
     "vendor": "Polyphase Labs",
     "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons",
-    "updated": "2026-08-01",
+    "updated": "2026-08-02",
     "packageCount": 21,
     "categories": [
         {
@@ -1094,7 +1094,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-08-01T20:45:14Z",
+            "updatedAt": "2026-08-02T00:54:18Z",
             "status": "published"
         }
     ]
