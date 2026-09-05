@@ -5,7 +5,7 @@
     "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
     "vendor": "Polyphase Labs",
     "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons",
-    "updated": "2026-08-31",
+    "updated": "2026-09-04",
     "packageCount": 21,
     "categories": [
         {
@@ -465,14 +465,14 @@
             },
             "urls": {
                 "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/main/package.json",
-                "readme": null,
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/main/README.md",
                 "documentation": null,
                 "releases": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/releases",
                 "issues": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.core/issues"
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-06-23T06:08:25Z",
+            "updatedAt": "2026-09-04T18:40:00Z",
             "status": "published"
         },
         {
@@ -512,14 +512,14 @@
             },
             "urls": {
                 "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/main/package.json",
-                "readme": null,
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/main/README.md",
                 "documentation": null,
                 "releases": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/releases",
                 "issues": "https://github.com/Polyphase-Labs/com.polyphase.editor.levelbuilder.tool.core/issues"
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-06-23T06:08:37Z",
+            "updatedAt": "2026-09-04T18:40:04Z",
             "status": "published"
         },
         {
@@ -998,7 +998,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-08-01T08:58:18Z",
+            "updatedAt": "2026-09-04T18:44:39Z",
             "status": "published"
         },
         {
@@ -1048,7 +1048,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-08-01T08:49:47Z",
+            "updatedAt": "2026-09-04T18:44:38Z",
             "status": "published"
         },
         {
