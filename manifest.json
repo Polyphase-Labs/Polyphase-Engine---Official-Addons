@@ -5,7 +5,7 @@
     "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
     "vendor": "Polyphase Labs",
     "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons",
-    "updated": "2026-09-05",
+    "updated": "2026-09-10",
     "packageCount": 21,
     "categories": [
         {
@@ -734,7 +734,7 @@
                 "url": "https://github.com/Polyphase-Labs/com.polyphase.build.target.psp/releases/tag/v1.0.0"
             },
             "prebuiltBinaries": [],
-            "updatedAt": "2026-09-05T19:55:29Z",
+            "updatedAt": "2026-09-09T18:16:17Z",
             "status": "published"
         },
         {
@@ -841,7 +841,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-09-05T20:00:39Z",
+            "updatedAt": "2026-09-10T01:59:25Z",
             "status": "published"
         },
         {
@@ -948,7 +948,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-06-15T06:16:51Z",
+            "updatedAt": "2026-09-10T01:59:36Z",
             "status": "published"
         },
         {
@@ -998,7 +998,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-09-04T18:44:39Z",
+            "updatedAt": "2026-09-10T01:52:53Z",
             "status": "published"
         },
         {
@@ -1048,7 +1048,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-09-04T18:44:38Z",
+            "updatedAt": "2026-09-10T01:52:54Z",
             "status": "published"
         },
         {
