@@ -1,4 +1,3 @@
-
 {
     "$comment": "Hand-edited input for tools/build-manifest.mjs. Everything here is merged on top of the data pulled from each addon repo's package.json / GitHub metadata. Edit this file, never manifest.json.",
     "registry": {
@@ -303,7 +302,17 @@
                 "asset",
                 "pipeline"
             ]
-        }
+        },
+        "com.polyphase.car.controller": {
+            "name": "Arcade Car Controller",
+            "summary": "Burnout / OutRun–style car controller for Polyphase, plus a Car Setup Wizard that turns a static mesh into a drivable car",
+            "description": "Burnout / OutRun–style car controller for Polyphase, plus a Car Setup Wizard that turns a static mesh into a drivable car.\n\nDeliberately arcade, not a simulation: no suspension springs, no tire force curves, no drivetrain. Grip never falls off past a peak, so the car cannot spin you out for over-slipping.",
+            "category": "systems",
+            "tags": [
+                "car",
+                "controller"
+            ],
+            "author": "Justin Jaro"
         }
     }
-
+}

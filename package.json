@@ -21,6 +21,7 @@
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.linux-arm64",
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgpu",
         "https://github.com/Polyphase-Labs/com.polyphase.build.target.webgl2",
-        "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda"
+        "https://github.com/Polyphase-Labs/com.polyphase.thirdparty.houdini.hda",
+        "https://github.com/Polyphase-Labs/com.polyphase.car.controller"
     ]
 }
