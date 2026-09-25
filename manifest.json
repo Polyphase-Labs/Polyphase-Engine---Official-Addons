@@ -5,8 +5,8 @@
     "description": "Official addon registry for the Polyphase Engine. Machine-readable index of every official addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon.",
     "vendor": "Polyphase Labs",
     "homepage": "https://github.com/Polyphase-Labs/Polyphase-Engine---Official-Addons",
-    "updated": "2026-09-14",
-    "packageCount": 21,
+    "updated": "2026-09-25",
+    "packageCount": 22,
     "categories": [
         {
             "id": "examples",
@@ -1095,6 +1095,48 @@
             "latestRelease": null,
             "prebuiltBinaries": [],
             "updatedAt": "2026-08-02T00:54:18Z",
+            "status": "published"
+        },
+        {
+            "id": "com.polyphase.car.controller",
+            "name": "Arcade Car Controller",
+            "summary": "Burnout / OutRun–style car controller for Polyphase, plus a Car Setup Wizard that turns a static mesh into a drivable car",
+            "description": "Burnout / OutRun–style car controller for Polyphase, plus a Car Setup Wizard that turns a static mesh into a drivable car.\n\nDeliberately arcade, not a simulation: no suspension springs, no tire force curves, no drivetrain. Grip never falls off past a peak, so the car cannot spin you out for over-slipping.",
+            "category": "systems",
+            "type": "plugin",
+            "tags": [
+                "car",
+                "controller"
+            ],
+            "version": "1.0.0",
+            "author": "Justin Jaro",
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 8,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.polyphase.car.controller",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/Polyphase-Labs/com.polyphase.car.controller",
+                "clone": "https://github.com/Polyphase-Labs/com.polyphase.car.controller.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.car.controller/main/package.json",
+                "readme": "https://raw.githubusercontent.com/Polyphase-Labs/com.polyphase.car.controller/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/Polyphase-Labs/com.polyphase.car.controller/releases",
+                "issues": "https://github.com/Polyphase-Labs/com.polyphase.car.controller/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-09-25T18:16:18Z",
             "status": "published"
         }
     ]
